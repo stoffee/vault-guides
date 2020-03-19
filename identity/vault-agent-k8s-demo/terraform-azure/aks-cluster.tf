@@ -17,7 +17,11 @@ variable "client_secret" {
 # Create an AKS cluster
 #--------------------------------------
 provider "azurerm" {
-  version = "~> 1.27"
+  subscription_id = var.subscription_id
+  client_id       = var.client_id
+  client_secret   = var.client_secret
+  tenant_id       = var.tenant_id
+  version         = "=1.3.1"
 }
 
 resource "random_id" "vault" {
