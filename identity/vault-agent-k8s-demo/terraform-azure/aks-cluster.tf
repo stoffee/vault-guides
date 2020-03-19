@@ -2,15 +2,23 @@
 # Declare variabls
 #--------------------------------------
 variable "prefix" {
-  default = "demo"
+  default = "aks-vault-demo"
+}
+
+variable "subscription_id" {
+  default = ""
 }
 
 variable "client_id" {
-  default = "vault-agent-demo"
+  default = ""
 }
 
 variable "client_secret" {
-  description = "Client secret to use"
+  default = ""
+}
+
+variable "tenant_id" {
+  default = ""
 }
 
 #--------------------------------------
