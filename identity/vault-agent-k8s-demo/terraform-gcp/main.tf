@@ -1,5 +1,5 @@
 provider "google" {
-  credentials = file(var.account_file_path)
+  credentials = var.account_file_path
   project     = var.project
   region      = var.gcloud-region
 }
@@ -18,7 +18,7 @@ resource "google_container_cluster" "gcp_kubernetes" {
 
   master_auth {
     username = var.linux_admin_username
-    password = "${var.linux_admin_password}}"
+    password = var.linux_admin_password
   }
 
   node_config {
