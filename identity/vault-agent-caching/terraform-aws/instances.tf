@@ -114,7 +114,7 @@ data "template_file" "vault-client" {
     tpl_vault_server_addr  = aws_instance.vault-server[0].private_ip
   }
   depends_on = [
-    aws_instance.vault-server.id,
+    aws_instance.vault-server,
   ]
 }
 
